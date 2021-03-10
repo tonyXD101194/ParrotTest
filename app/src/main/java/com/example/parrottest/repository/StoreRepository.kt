@@ -30,4 +30,9 @@ class StoreRepository(
 
         return storeDAO!!.delete(store)
     }
+
+    suspend fun deleteAllStores() {
+
+        return storeDAO!!.deleteAll()
+    }
 }

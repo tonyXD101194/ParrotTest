@@ -20,4 +20,7 @@ interface ProductDAO {
 
     @Delete
     suspend fun delete(product: ProductRoomModel)
+
+    @Query("DELETE FROM products")
+    suspend fun deleteAll()
 }

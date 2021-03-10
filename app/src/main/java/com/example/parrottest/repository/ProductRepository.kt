@@ -35,4 +35,9 @@ class ProductRepository(
 
         return productDAO!!.delete(product)
     }
+
+    suspend fun deleteAllProducts() {
+
+        return productDAO!!.deleteAll()
+    }
 }

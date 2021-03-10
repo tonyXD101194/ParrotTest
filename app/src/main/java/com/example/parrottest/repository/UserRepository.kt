@@ -30,4 +30,9 @@ class UserRepository(
 
         return userDAO!!.delete(user)
     }
+
+    suspend fun deleteAllUsers() {
+
+        return userDAO!!.deleteAll()
+    }
 }

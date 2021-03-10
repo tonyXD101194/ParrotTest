@@ -17,4 +17,7 @@ interface UserDAO {
 
     @Delete
     suspend fun delete(user: UserRoomModel)
+
+    @Query("DELETE FROM users")
+    suspend fun deleteAll()
 }

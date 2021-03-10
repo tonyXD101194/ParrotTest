@@ -28,13 +28,33 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+
+            debuggable true
+
+            testCoverageEnabled true
+        }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
     }
 }
 
@@ -88,10 +108,12 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'com.google.truth:truth:1.1.2'
 
     // Mockito framework
     testImplementation 'org.mockito:mockito-core:2.13.0'
     testImplementation 'org.mockito:mockito-inline:2.13.0'
+    testImplementation 'com.google.truth:truth:1.1.2'
 
     // Room
     testImplementation "androidx.room:room-testing:$room_version"

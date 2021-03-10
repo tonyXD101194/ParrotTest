@@ -31,7 +31,7 @@ class CategoryRepository(
         return categoryDao!!.delete(category)
     }
 
-    suspend fun deleteAll() {
+    suspend fun deleteAllCategories() {
 
         categoryDao!!.deleteAll()
     }

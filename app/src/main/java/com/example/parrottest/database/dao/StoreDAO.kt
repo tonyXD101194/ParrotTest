@@ -17,4 +17,7 @@ interface StoreDAO {
 
     @Delete
     suspend fun delete(store: StoreRoomModel)
+
+    @Query("DELETE FROM stores")
+    suspend fun deleteAll()
 }
