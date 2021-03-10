@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ParrotTest</string>
+
+    <!-- Login Activity -->
+    <string name="activity_login_hint_username">Username</string>
+    <string name="activity_login_hint_password">Password</string>
+    <string name="activity_login_button_login">Sign in</string>
+
+    <!-- Login Messages -->
+    <string name="message_login_miss_fields">You need to complete all fields</string>
+    <string name="message_login_wrong_email">You need to enter a valid email</string>
+    <string name="message_login_something_wrong">Something wrong happened, try again</string>
+
+    <!-- Category Fragment -->
+    <string name="fragment_category_item_category">%s (%s)</string>
+    <string name="fragment_category_change_status_ok">Product updated success !</string>
+    <string name="fragment_category_change_status_wrong">Service to updated not available now, try later</string>
+    <string name="fragment_category_list_empty">No categories available to show</string>
+
+    <!-- Item Product -->
+    <string name="item_product_available_title">Available</string>
+    <string name="item_product_price">$ %s</string>
+
+    <!-- Dashboard Messages -->
+    <string name="message_dashboard_something_wrong">Something wrong happened, try later</string>
+
+    <!-- Generic Buttons -->
+    <string name="button_ok">Ok</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_cancel">Cancel</string>
+
+    <!-- Internet messages -->
+    <string name="no_internet">You do not have a connection to Internet</string>
+    <string name="no_internet_banner">No Internet available</string>
+    <string name="no_token_saved">Token expired, close session and try again</string>
+
+    <!-- Dialog Loading -->
+    <string name="dialog_loading_title">Loading...</string>
+
+    <!-- Menu Actions -->
+    <string name="menu_action_exit">Close session</string>
+
+    <!-- Messages close session -->
+    <string name="message_close_session">Do you want to close session ?</string>
+</resources>

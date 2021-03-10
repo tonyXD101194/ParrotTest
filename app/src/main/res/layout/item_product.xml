@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/default_size">
+
+    <ImageView
+        android:id="@+id/itemProductImageViewUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="@dimen/default_size_x4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/itemProductTextViewNameProduct" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemProductTextViewNameProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_combo"
+        android:textStyle="bold"
+        android:textSize="@dimen/input_text_combo"
+        android:padding="@dimen/default_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemProductImageViewUrl"
+        app:layout_constraintEnd_toStartOf="@+id/itemProductTextViewAvailableTitle"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemProductTextViewNamePrice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/text_combo"
+        android:textSize="@dimen/input_text_combo"
+        android:padding="@dimen/default_size"
+        app:layout_constraintTop_toBottomOf="@+id/itemProductTextViewNameProduct"
+        app:layout_constraintBottom_toBottomOf="@+id/itemProductImageViewUrl"
+        app:layout_constraintStart_toEndOf="@+id/itemProductImageViewUrl"
+        app:layout_constraintEnd_toStartOf="@+id/itemProductTextViewAvailableTitle"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemProductTextViewAvailableTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/default_size"
+        android:text="@string/item_product_available_title"
+        android:textColor="@color/text_combo"
+        android:textSize="@dimen/input_text_combo"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemProductTextViewNamePrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemProductTextViewNameProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/itemProductSwitchStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/itemProductTextViewAvailableTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemProductTextViewAvailableTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/itemProductImageViewUrl"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue_749"
+        android:layout_marginStart="@dimen/default_size_x4"
+        app:layout_constraintTop_toBottomOf="@+id/itemProductImageViewUrl"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
